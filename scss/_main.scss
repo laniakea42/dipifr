@@ -392,11 +392,11 @@
 		position: relative;
 		img {height: 100%; height: 100%; margin-left: auto;
 		object-fit: cover; object-position: right center;}
-		a {
+		.vid-link {
 			position: absolute;
-			right: 105px;
+			right: 104px;
 			top: 109px;
-			width: 756px;
+			width: 759px;
 			overflow: hidden;
 			height: 469px;
 			border-radius: 2px;
@@ -500,7 +500,7 @@
 			display: flex; align-items: flex-start;
 			padding-top: 20px; padding-bottom: 20px;
 		}
-		&--content {font-size: 26px; font-weight: 500;}
+		&--content {font-size: 26px; font-weight: 500; cursor: pointer;}
 	}
 	&__body {
 		display: none;
@@ -509,7 +509,7 @@
 		margin-bottom: 30px;
 		&.active {display: block;}
 		.container {padding-top: 50px; padding-bottom: 50px;}
-		&--content {max-width: 850px;
+		&--content {max-width: 850px; cursor: default;
 		margin-left: 110px; font-size: 1.3rem;
 		position: relative; z-index: 3;}
 
@@ -648,7 +648,7 @@
 		h1,h2,h3,h4 {font-size: 36px; line-height: 1;}
 		.title30 {font-size: 22px;}
 
-		.large-vid a {
+		.large-vid .vid-link {
 			right: 104px;
 			top: 108px;
 			width: 756px;
@@ -664,7 +664,7 @@
 		img {
 			max-height: 500px;
 		}
-		.large-vid a {
+		.large-vid .vid-link {
 			right: 65px;
 			top: 67px;
 			width: 474px;
@@ -862,11 +862,13 @@
 				object-position: center bottom;
 				object-fit: contain;
 			}
-			a {
+			.vid-link {
 				right: calc(50% - 138px);
 				top: 38px;
 				width: 269px;
 				height: 168px;
+				object-fit: cover;
+				overflow: hidden;
 			}
 		}
 	}
@@ -996,6 +998,7 @@
 		}
 	}
 	.rel1 .girl-img {display: none;}
+	.omg-sec .title30 {width: calc(100% - 20px);}
 }
 
 @media(max-width: 420px) {
@@ -1011,6 +1014,7 @@
 	.faq__body .tr {
 		width: 80px; height: 80px;
 	}
+	
 }
 
 @media(max-width: 365px) {
@@ -1038,11 +1042,7 @@
 	transition: 300ms ease-in-out;
 	animation: animate 7s ease infinite;
 	animation-fill-mode: both;
-	animation-play-state: paused; 
-
-	&:hover {
-		animation-play-state: running;
-	}
+	animation-play-state: running;
 }
 
 @keyframes animate {
@@ -1056,4 +1056,13 @@
 		background-position: 0 0;
 	}
 	
+}
+
+@media (min-width: 1730px) {
+	.rel10 .girl-img {
+		left: 49px;
+		max-width: 66.5vw;
+		min-height: 69vh;
+		max-height: 70vh;
+	}
 }
